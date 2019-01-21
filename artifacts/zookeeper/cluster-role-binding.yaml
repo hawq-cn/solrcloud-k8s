@@ -1,0 +1,14 @@
+# binding role [hawq_operator_role] to the default service account (in default namespace)
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: zk_operator_binding
+#  namespace: default
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: zk_operator_role
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: default
