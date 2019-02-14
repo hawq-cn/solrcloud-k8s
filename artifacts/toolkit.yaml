@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "toolkit"
+spec:
+  containers:
+  - name: "shell"
+    image: "ubuntu:14.04"
+    command: ["/bin/sh", "-c"]
+    args: ["sleep 3600000"]
